@@ -2,6 +2,11 @@ package com.example.demo.entity;
 
 import java.util.List;
 
+import org.springframework.data.annotation.ReadOnlyProperty;
+
+import com.example.demo.projections.UserProjection;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -27,9 +32,8 @@ public class Project {
 	private float investimento;
 	
 
-	@ManyToMany
-	@JoinTable(name = "project_user",joinColumns =  @JoinColumn(name = "project_id"),inverseJoinColumns = @JoinColumn(name = "user_id"))
-	private List<User> user;
+	@ManyToMany(mappedBy = "project")
+	private List<UserProjection> user;
 	
 	@ManyToOne()
 	@JoinColumn(name = "department_id")
@@ -43,10 +47,10 @@ public class Project {
 	public void setInvestimento(float investimento) {
 		this.investimento = investimento;
 	}
-	public List<User> getUsuarios() {
+	public List<UserProjection> getUsuarios() {
 		return user;
 	}
-	public void setUsuarios(List<User> usuarios) {
+	public void setUsuarios(List<UserProjection> usuarios) {
 		this.user = usuarios;
 	}
 	public Department getDepartment() {

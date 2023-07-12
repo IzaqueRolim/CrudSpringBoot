@@ -5,6 +5,8 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -34,8 +36,12 @@ public class User {
 	@JoinColumn(name = "department_id")
 	private Department department;
 
-	@ManyToMany(mappedBy = "user")
-   	@Autowired
+	@ManyToMany()
+	@JoinTable(name = "user_project",
+	joinColumns =  @JoinColumn(name = "user_id"),
+	inverseJoinColumns = @JoinColumn(name = "project_id"))
+	@JsonIgnoreProperties("usuarios")
+  // 	@Autowired
     private List<Project> project;
 
 	public List<Project> getProject() {
