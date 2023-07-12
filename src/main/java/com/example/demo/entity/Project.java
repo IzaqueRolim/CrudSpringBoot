@@ -7,7 +7,10 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
@@ -21,10 +24,37 @@ public class Project {
 	private String descricao;
 	private String data_inicio;
 	private String data_final;
+	private float investimento;
 	
-	@ManyToMany(mappedBy = "project")
-	private List<User> usuarios;
+
+	@ManyToMany
+	@JoinTable(name = "project_user",joinColumns =  @JoinColumn(name = "project_id"),inverseJoinColumns = @JoinColumn(name = "user_id"))
+	private List<User> user;
+	
+	@ManyToOne()
+	@JoinColumn(name = "department_id")
+	private Department department;
+	
+	
 	 
+	public float getInvestimento() {
+		return investimento;
+	}
+	public void setInvestimento(float investimento) {
+		this.investimento = investimento;
+	}
+	public List<User> getUsuarios() {
+		return user;
+	}
+	public void setUsuarios(List<User> usuarios) {
+		this.user = usuarios;
+	}
+	public Department getDepartment() {
+		return department;
+	}
+	public void setDepartment(Department department) {
+		this.department = department;
+	}
 	public Long getId() {
 		return id;
 	}

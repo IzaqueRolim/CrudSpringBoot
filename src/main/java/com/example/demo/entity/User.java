@@ -3,6 +3,8 @@ package com.example.demo.entity;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,6 +12,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
@@ -24,29 +27,35 @@ public class User {
 	private String name;
 	private String email;
 	
+
+	private int salario;
+	
 	@ManyToOne
 	@JoinColumn(name = "department_id")
 	private Department department;
 
-	@ManyToOne
-    @JoinTable(
-        name = "user_project",
-        joinColumns = @JoinColumn(name = "user_id"),
-        inverseJoinColumns = @JoinColumn(name = "project_id")
-    )
-    private List<Project> projetos;
-	
-	public List<Project> getProjetos() {
-		return projetos;
+	@ManyToMany(mappedBy = "user")
+   	@Autowired
+    private List<Project> project;
+
+	public List<Project> getProject() {
+		return project;
 	}
 
-	public void setProjetos(List<Project> projetos) {
-		this.projetos = projetos;
+	public void setProject(List<Project> project) {
+		this.project = project;
 	}
 
 	public User() {
 	}
 
+	public int getSalario() {
+		return salario;
+	}
+
+	public void setSalario(int salario) {
+		this.salario = salario;
+	}
 	public Long getId() {
 		return id;
 	}
