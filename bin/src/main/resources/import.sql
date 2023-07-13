@@ -18,5 +18,3 @@ INSERT INTO tb_user(department_id, name, email,salario) VALUES (1, 'Maria', 'mar
 INSERT INTO tb_user(department_id, name, email,salario) VALUES (1, 'Bob', 'bob@gmail.com',2400);
 INSERT INTO tb_user(department_id, name, email,salario) VALUES (2, 'Alex', 'alex@gmail.com',5600);
 INSERT INTO tb_user(department_id, name, email,salario) VALUES (2, 'Ana', 'ana@gmail.com',8988);
-
-INSERT INTO USER_PROJECT(project_id,user_id) VALUES(1,1);

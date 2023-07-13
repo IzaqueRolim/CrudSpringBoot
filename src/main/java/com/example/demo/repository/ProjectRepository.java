@@ -9,6 +9,5 @@ import com.example.demo.entity.User;
 import com.example.demo.projections.UserProjection;
 
 public interface ProjectRepository extends JpaRepository<Project, Long>{
-	List<UserProjection> findAllProjects();
 
 }

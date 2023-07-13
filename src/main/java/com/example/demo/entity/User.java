@@ -28,8 +28,7 @@ public class User {
 	private Long id;
 	private String name;
 	private String email;
-	
-
+	private String senha;
 	private int salario;
 	
 	@ManyToOne
@@ -92,5 +91,13 @@ public class User {
 
 	public void setDepartment(Department department) {
 		this.department = department;
+	}
+
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
 	}
 }

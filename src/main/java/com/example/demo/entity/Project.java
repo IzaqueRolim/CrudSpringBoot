@@ -33,7 +33,8 @@ public class Project {
 	
 
 	@ManyToMany(mappedBy = "project")
-	private List<UserProjection> user;
+	@JsonIgnoreProperties({"project"})
+	private List<User> user;
 	
 	@ManyToOne()
 	@JoinColumn(name = "department_id")
@@ -47,11 +48,11 @@ public class Project {
 	public void setInvestimento(float investimento) {
 		this.investimento = investimento;
 	}
-	public List<UserProjection> getUsuarios() {
+	public List<User> getUsuarios() {
 		return user;
 	}
-	public void setUsuarios(List<UserProjection> usuarios) {
-		this.user = usuarios;
+	public void setUsuarios(List<User> users) {
+		this.user = users;
 	}
 	public Department getDepartment() {
 		return department;
