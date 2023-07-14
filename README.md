@@ -15,20 +15,18 @@
 O sistema conta com as seguintes funcionalidades
 
 ###### Entidade colaborador
-- `GET /colaboradores:` Retorna todos os colaboradores cadastrados.
-- `GET /colaboradores/{id}:` Retorna um colaborador específico pelo ID.
-- `POST /colaboradores:` Cria um novo colaborador.
-- `PUT /colaboradores/{id}:` Atualiza um colaborador existente pelo ID.
-- `DELETE /colaboradores/{id}:` Remove um colaborador pelo ID.
+- `GET /colaboradores/` Retorna todos os colaboradores cadastrados.
+- `GET /colaboradores/{id}/` Retorna um colaborador específico pelo ID.
+- `POST /novoColaborador/` Cria um novo colaborador.
+- `PUT /colaboradores/{id}/` Atualiza um colaborador existente pelo ID.
+- `DELETE /colaboradores/{id}/` Remove um colaborador pelo ID.
 ###### Entidade Projeto
-- `GET /projetos:` Retorna todos os projetos cadastrados.
-- `GET /projetos/{id}:` Retorna um projeto específico pelo ID.
-- `POST /projetos:` Cria um novo projeto.
-- `PUT /projetos/{id}:` Atualiza um projeto existente pelo ID.
-- `DELETE /projetos/{id}:` Remove um projeto pelo ID.
+- `GET /projetos/` Retorna todos os projetos cadastrados.
+- `GET /projetos/{id}/` Retorna um projeto específico pelo ID.
+- `POST /novoProjetos/` Cria um novo projeto.
+- `PUT /projetos/{id}/` Atualiza um projeto existente pelo ID.
+- `DELETE /projetos/{id}/` Remove um projeto pelo ID.
 ###### Entidade Departamento
-- `GET /departamentos:` Retorna todos os departamentos cadastrados.
-- `GET /departamentos/{id}:` Retorna um departamento específico pelo ID.
-- `POST /departamentos:` Cria um novo departamento.
-- `PUT /departamentos/{id}:` Atualiza um departamento existente pelo ID.
-- `DELETE /departamentos/{id}:` Remove um departamento pelo ID.
+- `GET /departamentos/` Retorna todos os departamentos cadastrados.
+- `GET /departamentos/{id}/` Retorna um departamento específico pelo ID.
+- `POST /departamentos/` Cria um novo departamento.
