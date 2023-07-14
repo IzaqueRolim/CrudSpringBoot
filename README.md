@@ -15,11 +15,11 @@
 O sistema conta com as seguintes funcionalidades
 
 ###### Entidade colaborador
-- `GET /colaboradores/` Retorna todos os colaboradores cadastrados.
-- `GET /colaboradores/{id}/` Retorna um colaborador específico pelo ID.
-- `POST /novoColaborador/` Cria um novo colaborador.
-- `PUT /colaboradores/{id}/` Atualiza um colaborador existente pelo ID.
-- `DELETE /colaboradores/{id}/` Remove um colaborador pelo ID.
+- `GET /colaboradores/📋` Retorna todos os colaboradores cadastrados.
+- `GET /colaboradores/{id}/ 📋` Retorna um colaborador específico pelo ID.
+- `POST /novoColaborador/ ✏️` Cria um novo colaborador.
+- `PUT /colaboradores/{id}/🔄` Atualiza um colaborador existente pelo ID.
+- `DELETE /colaboradores/{id}/❌` Remove um colaborador pelo ID.
 ###### Entidade Projeto
 - `GET /projetos/` Retorna todos os projetos cadastrados.
 - `GET /projetos/{id}/` Retorna um projeto específico pelo ID.
