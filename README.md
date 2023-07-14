@@ -39,7 +39,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
   <tr>
     <td align="center">
       <a href="#">
-        <img src="[https://miro.medium.com/max/360/0*1SkS3mSorArvY9kS.jpg](https://avatars.githubusercontent.com/u/98198585?v=4)" width="100px;" alt="Foto do Steve Jobs"/><br>
+        <img src="https://miro.medium.com/max/360/0*1SkS3mSorArvY9kS.jpg" width="100px;" alt="Foto do Steve Jobs"/><br>
         <sub>
           <b>Izaque Rolim</b>
         </sub>
