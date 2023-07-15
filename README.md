@@ -3,16 +3,20 @@
 
 > Este é o meu primeiro aplicativo backend desenvolvido em Spring Boot que oferece funcionalidades CRUD (Create, Read, Update, Delete) para três entidades principais: Colaborador, Projeto e Departamento.
 
-### Requisitos
+## Contexto
+  Um sistema de uma empresa que tem como objetivo controlar os dados dos Colaboradores, dos Projetos e os Departamentos da empresa.
+
+## Requisitos
 > Certifique-se de ter as seguintes ferramentas instaladas em seu ambiente de desenvolvimento:
 
     1. Java Development Kit (JDK) 8 ou superior
     2. Maven
-    3. Spring Boot
+    3. Eclipe, Netbeans ou InteliiJ
+    4. Spring Boot
 
 
-### Endpoints
-O sistema conta com as seguintes funcionalidades
+## Endpoints
+O sistema conta com os seguintes endpoints
 
 ###### Entidade colaborador
 - `GET /colaboradores/` Retorna todos os colaboradores cadastrados.📋
@@ -53,7 +57,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 
 > Para contribuir com este projeto, siga estas etapas:
 
-    1. Bifurque este repositório.
+    1. Clone ou baixe este repositório.
     2. Crie um branch: git checkout -b <nome_branch>.
     3. Faça suas alterações e confirme-as: git commit -m '<mensagem_commit>'
     4. Envie para o branch original: git push origin <nome_do_projeto> / <local>
